@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Color Palette Specs: #d8e2dc, #ffe5d9, #ffcad4, #f4acb7, #9d8189 */
+  --c-sage: #d8e2dc;
+  --c-peach: #ffe5d9;
+  --c-pink-light: #ffcad4;
+  --c-pink-coral: #f4acb7;
+  --c-mauve-deep: #9d8189;
+
+  --bg-dark: #0f0c0e;
+  --bg-surface: #191417;
+  --bg-surface-hover: #241d21;
+  --border-subtle: rgba(244, 172, 183, 0.15);
+  
+  --text-primary: #fff5f7;
+  --text-secondary: #d8e2dc;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Subtle, aesthetic grid texture tinted with soft mauve */
+.bg-grid-subtle {
+  background-image: radial-gradient(rgba(244, 172, 183, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0c0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #9d8189;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f4acb7;
+}
+
+/* Refined palette animations */
+@keyframes live-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+}
+
+@keyframes live-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(244, 172, 183, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(244, 172, 183, 0.5);
+  }
+}
+
+.animate-live-pulse {
+  animation: live-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-live-glow {
+  animation: live-glow 2.5s ease-in-out infinite;
+}
