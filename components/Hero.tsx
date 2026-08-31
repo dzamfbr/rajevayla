@@ -18,7 +18,9 @@ export default function Hero({
   const [viewerCount, setViewerCount] = useState<number>(0);
   const [scheduleText, setScheduleText] = useState("");
   const [currentTimeWib, setCurrentTimeWib] = useState("");
-  const [liveUrl, setLiveUrl] = useState(`https://www.tiktok.com/@${TIKTOK_USERNAME}/live`);
+  const [liveUrl, setLiveUrl] = useState(
+    `https://www.tiktok.com/@${TIKTOK_USERNAME}/live`,
+  );
   const [isFetchingTiktok, setIsFetchingTiktok] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -40,7 +42,7 @@ export default function Hero({
 
     try {
       const res = await fetch(`/api/tiktok-status?username=${TIKTOK_USERNAME}`);
-      
+
       if (res.ok) {
         const data = await res.json();
 
@@ -67,7 +69,9 @@ export default function Hero({
       setIsFetchingTiktok(false);
 
       if (hours < 15) {
-        setScheduleText("Jadwal Stream Hari Ini: Pukul 15:00 - 21:00 WIB (Setiap Hari)");
+        setScheduleText(
+          "Jadwal Stream Hari Ini: Pukul 15:00 - 21:00 WIB (Setiap Hari)",
+        );
       } else if (hours >= 21) {
         setScheduleText("Jadwal Stream Berikutnya: Besok Pukul 15:00 WIB");
       } else {
@@ -88,7 +92,6 @@ export default function Hero({
   return (
     <section className="pt-6 sm:pt-10 pb-4 sm:pb-6 px-3.5 sm:px-5">
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-        
         {/* Responsive Streamer Avatar Image */}
         <div className="relative mb-5 sm:mb-6">
           <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden bg-[#191417] border border-[#f4acb7]/30 shadow-2xl p-1">
@@ -108,25 +111,38 @@ export default function Hero({
 
         {/* Name & Responsive Bio */}
         <h1 className="font-display text-2xl sm:text-4xl font-extrabold tracking-tight text-[#fff5f7] mb-1.5 sm:mb-2">
-          AYLA STREAM
+          Rajev Ayla
         </h1>
         <p className="text-[#d8e2dc] text-xs sm:text-base max-w-lg mb-5 sm:mb-6 leading-relaxed px-2">
-          Mobile Legends Content Creator & Streamer. Spesialis hero Mage & Support. Live streaming setiap hari jam 3 sore - 9 malam di TikTok!
+          Haaii guys! Terima kasih banyak yang udah mampir dan kasih support!
+          Jangan lupa follow biar ga ketinggalan keseruannya! Mwah! :3
         </p>
 
         {/* Responsive Quick Gamer Stats Bar */}
         <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-md w-full mb-5 sm:mb-6">
           <div className="bg-[#191417] border border-[#f4acb7]/15 p-2 sm:p-3 rounded-xl flex flex-col justify-center">
-            <span className="text-[9px] sm:text-[10px] text-[#9d8189] font-bold uppercase tracking-wider block mb-0.5">Role</span>
-            <span className="text-[11px] sm:text-xs font-semibold text-[#ffcad4] truncate">Mage / Support</span>
+            <span className="text-[9px] sm:text-[10px] text-[#9d8189] font-bold uppercase tracking-wider block mb-0.5">
+              Role
+            </span>
+            <span className="text-[11px] sm:text-xs font-semibold text-[#ffcad4] truncate">
+              Mage / Support
+            </span>
           </div>
           <div className="bg-[#191417] border border-[#f4acb7]/15 p-2 sm:p-3 rounded-xl flex flex-col justify-center">
-            <span className="text-[9px] sm:text-[10px] text-[#9d8189] font-bold uppercase tracking-wider block mb-0.5">Platform</span>
-            <span className="text-[11px] sm:text-xs font-semibold text-[#d8e2dc] truncate">TikTok Live</span>
+            <span className="text-[9px] sm:text-[10px] text-[#9d8189] font-bold uppercase tracking-wider block mb-0.5">
+              Platform
+            </span>
+            <span className="text-[11px] sm:text-xs font-semibold text-[#d8e2dc] truncate">
+              TikTok Live
+            </span>
           </div>
           <div className="bg-[#191417] border border-[#f4acb7]/15 p-2 sm:p-3 rounded-xl flex flex-col justify-center">
-            <span className="text-[9px] sm:text-[10px] text-[#9d8189] font-bold uppercase tracking-wider block mb-0.5">Jadwal</span>
-            <span className="text-[11px] sm:text-xs font-semibold text-[#ffe5d9] truncate">15:00 - 21:00</span>
+            <span className="text-[9px] sm:text-[10px] text-[#9d8189] font-bold uppercase tracking-wider block mb-0.5">
+              Jadwal
+            </span>
+            <span className="text-[11px] sm:text-xs font-semibold text-[#ffe5d9] truncate">
+              15:00 - 21:00
+            </span>
           </div>
         </div>
 
@@ -182,7 +198,9 @@ export default function Hero({
                     <span className="text-[10px] font-mono text-[#f4acb7] bg-[#241d21] border border-[#f4acb7]/30 px-2 py-0.5 rounded inline-block">
                       👀 {viewerCount} Viewers
                     </span>
-                  ) : <span></span>}
+                  ) : (
+                    <span></span>
+                  )}
                   {isFetchingTiktok && (
                     <span className="text-[10px] text-[#9d8189] font-mono animate-pulse">
                       Mengecek status...
@@ -195,7 +213,8 @@ export default function Hero({
               </div>
             ) : (
               <p className="text-xs sm:text-sm font-medium text-[#d8e2dc] leading-relaxed">
-                Saat ini Ayla (@tojisfavoritewifeu) tidak sedang live di TikTok. {scheduleText}
+                Saat ini Ayla (@tojisfavoritewifeu) tidak sedang live di TikTok.{" "}
+                {scheduleText}
               </p>
             )}
           </div>
@@ -211,13 +230,18 @@ export default function Hero({
                 : "bg-[#241d21] hover:bg-[#2e252a] text-[#ffe5d9] border border-[#f4acb7]/20"
             }`}
           >
-            <i className={isLive ? "fa-solid fa-play text-xs" : "fa-brands fa-tiktok"}></i>
+            <i
+              className={
+                isLive ? "fa-solid fa-play text-xs" : "fa-brands fa-tiktok"
+              }
+            ></i>
             <span>
-              {isLive ? "TONTON LIVE DI TIKTOK SEKARANG" : "KUNJUNGI PROFIL TIKTOK AYLA"}
+              {isLive
+                ? "TONTON LIVE DI TIKTOK SEKARANG"
+                : "KUNJUNGI PROFIL TIKTOK AYLA"}
             </span>
           </a>
         </div>
-
       </div>
     </section>
   );

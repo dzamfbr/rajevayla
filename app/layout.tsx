@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ayla Streamer",
-  description:
-    "Official Personal Website & Live Streaming Hub for Ayla - Mobile Legends Streamer",
+  title: "Rajeva Ayla Official Website",
+  description: "Official Personal Website for Ayla",
   icons: {
     icon: "/image2.png",
     shortcut: "/image2.png",

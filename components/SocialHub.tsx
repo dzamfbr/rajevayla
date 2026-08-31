@@ -5,23 +5,23 @@ const SOCIAL_PLATFORMS = [
     name: "TikTok",
     icon: "fa-brands fa-tiktok",
     url: "https://www.tiktok.com/@tojisfavoritewifeu",
-    badge: "Utama",
+    badge: "Official",
     accent: "hover:border-[#f4acb7]/60 group-hover:text-[#f4acb7]",
   },
   {
     name: "Instagram",
     icon: "fa-brands fa-instagram",
-    url: "https://instagram.com",
+    url: "https://www.instagram.com/aylarajevaa/",
     badge: "Official",
     accent: "hover:border-[#ffcad4]/60 group-hover:text-[#ffcad4]",
   },
-  {
+  /*{
     name: "YouTube",
     icon: "fa-brands fa-youtube",
     url: "https://youtube.com",
     badge: "Official",
     accent: "hover:border-[#ffe5d9]/60 group-hover:text-[#ffe5d9]",
-  },
+  },*/
 ];
 
 export default function SocialHub() {
