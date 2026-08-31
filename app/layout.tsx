@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     apple: "/image2.png",
   },
   verification: {
-    google: "google6ea4cd95f46e6f99",
+    google: "8JH4wtQG9lL6ChQ37hgPrrYi9uVAkmJXCXCOQYaNSRI",
   },
 };
 
