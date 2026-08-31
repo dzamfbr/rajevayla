@@ -111,7 +111,7 @@ export default function Hero({
 
         {/* Name & Responsive Bio */}
         <h1 className="font-display text-2xl sm:text-4xl font-extrabold tracking-tight text-[#fff5f7] mb-1.5 sm:mb-2">
-          Rajev Ayla
+          Rajeva Ayla
         </h1>
         <p className="text-[#d8e2dc] text-xs sm:text-base max-w-lg mb-5 sm:mb-6 leading-relaxed px-2">
           Haaii guys! Terima kasih banyak yang udah mampir dan kasih support!
