@@ -15,13 +15,14 @@ const SOCIAL_PLATFORMS = [
     badge: "Official",
     accent: "hover:border-[#ffcad4]/60 group-hover:text-[#ffcad4]",
   },
-  /*{
+  {
     name: "YouTube",
     icon: "fa-brands fa-youtube",
-    url: "https://youtube.com",
+    url: "
+https:"https://www.youtube.com/@aylarajeva",
     badge: "Official",
     accent: "hover:border-[#ffe5d9]/60 group-hover:text-[#ffe5d9]",
-  },*/
+  },
 ];
 
 export default function SocialHub() {
