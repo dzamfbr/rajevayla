@@ -18,8 +18,7 @@ const SOCIAL_PLATFORMS = [
   {
     name: "YouTube",
     icon: "fa-brands fa-youtube",
-    url: "
-https:"https://www.youtube.com/@aylarajeva",
+    url: "https://www.youtube.com/@aylarajeva",
     badge: "Official",
     accent: "hover:border-[#ffe5d9]/60 group-hover:text-[#ffe5d9]",
   },
